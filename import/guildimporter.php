@@ -89,9 +89,9 @@ class guildImporter extends page_generic {
 			foreach ($xml->Members->Member as $objMember) {	
 				$dataarry = array(
 					'name'		=> (string)$objMember->Name,
-					'lvl'		=> (int)$objMember->Level,
-					'classid'	=> $this->game->get_id('classes', (string)$objMember->Calling),
-					'raceid'	=> 0,
+					'level'		=> (int)$objMember->Level,
+					'class'		=> $this->game->get_id('classes', (string)$objMember->Calling),
+					'race'		=> 0,
 				);
 				
 				if ((int)$this->in->get('ranks') == 1){
