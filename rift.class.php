@@ -101,7 +101,6 @@ if(!class_exists('rift')) {
 			);
 			
 			parent::__construct();
-			$this->pdh->register_read_module($this->this_game, $this->path . 'pdh/read/'.$this->this_game);
 		}
 
 		/**
