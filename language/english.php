@@ -65,6 +65,15 @@ $english_array = array(
 		'import_status_false'			=> 'Error',
 		'guild_xml_error'				=> 'The Guild-XML is not valid.',
 		'uc_delete_chars_onimport'		=> 'Delete Chars that have left the guild',
+
+		// profile fields
+		'uc_race'						=> 'Race',
+		'uc_class'						=> 'Class',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'		=> 'RIFT Settings',
+		'uc_faction'					=> 'Faction',
+		'uc_faction_help'				=> 'Select the default faction',
 	),
 );
 ?>

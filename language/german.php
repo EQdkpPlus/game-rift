@@ -65,6 +65,14 @@ $german_array = array(
 		'import_status_false'			=> 'Fehler',
 		'guild_xml_error'				=> 'Das Gilden-XML hat ein nicht gültiges Format.',
 		'uc_delete_chars_onimport'		=> 'Charaktere im System löschen, die nicht mehr in der Gilde sind',
+		
+		'uc_race'						=> 'Rasse',
+		'uc_class'						=> 'Klasse',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'		=> 'RIFT Einstellungen',
+		'uc_faction'					=> 'Fraktion',
+		'uc_faction_help'				=> 'Wähle die Standard-Fraktion',
 	),
 );
 ?>

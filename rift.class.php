@@ -23,7 +23,8 @@ if(!class_exists('rift')) {
 	class rift extends game_generic {
 		protected static $apiLevel	= 20;
 		public $version				= '2.0';
-		protected $types			= array('classes', 'races', 'factions', 'filters');
+		protected $this_game		= 'rift';
+		protected $types			= array('classes', 'races', 'factions', 'filters', 'roles');
 		protected $classes			= array();
 		protected $races			= array();
 		protected $factions			= array();
