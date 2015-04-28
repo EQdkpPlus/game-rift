@@ -87,8 +87,7 @@ if(!class_exists('rift_magelo')) {
 			$data = $this->puf->fetch('http://rift.magelo.com/'.$lang.'/items?q='. $codedname);
 			$this->searched_langs[] = $lang;
 
-			 if (preg_match_all('#return\[\[\"(.*?)\",\"rift:item:(.*?)\",\"\/de\/item\/(.*?)\/(.*?)\",\"(.*?)\"#', $data, $matches))
-            {
+			if(preg_match_all('#return\[\[\"(.*?)\",\"rift:item:(.*?)\",\"\/'.$lang.'\/item\/(.*?)\/(.*?)\",\"(.*?)\"#', $data, $matches)){
 				foreach ($matches[0] as $key => $match) {
 					if (strcasecmp($matches[1][$key], $itemname) == 0) {
 						$item_id[0] = $matches[2][$key];
