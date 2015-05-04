@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('rift')) {
 	class rift extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '2.1.0';
+		public $version				= '2.1.1';
 		protected $this_game		= 'rift';
 		protected $types			= array('classes', 'races', 'factions', 'filters', 'roles');
 		protected $classes			= array();
