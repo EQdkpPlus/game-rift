@@ -29,6 +29,7 @@ $german_array = array(
 		2	=> 'Schurke',
 		3	=> 'Kleriker',
 		4	=> 'Magier',
+		5	=> 'Primalist',
 	),
 	'races' => array(
 		0	=> 'Unknown',

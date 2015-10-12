@@ -29,6 +29,7 @@ $english_array = array(
 		2	=> 'Rogue',
 		3	=> 'Cleric',
 		4	=> 'Mage',
+		5	=> 'Primalist',
 	),
 	'races' => array(
 		0	=> 'Unknown',
