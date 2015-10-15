@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('rift')) {
 	class rift extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '3.4.0';
+		public $version				= '3.4.1';
 		protected $this_game		= 'rift';
 		protected $types			= array('classes', 'races', 'factions', 'filters', 'roles');
 		protected $classes			= array();
@@ -79,19 +79,20 @@ if(!class_exists('rift')) {
 				),
 			),
 		);
-		
+
 		public $default_roles = array(
 			1	=> array(3,4),
 			2	=> array(1,2,3),
 			3	=> array(1,2,3,4),
 			4	=> array(2,3,4),
 		);
-		
+
 		protected $class_colors = array(
 			1	=> '#ff0000',
 			2	=> '#ffff00',
 			3	=> '#008000',
 			4	=> '#800080',
+			5	=> '#00FFFF',
 		);
 
 		protected $glang		= array();
@@ -104,7 +105,7 @@ if(!class_exists('rift')) {
 				'guild_import'		=> 'guildimporter.php',						// filename of the guild import
 				'guild_imp_rsn'		=> false									// Guild import & Mass update requires server name
 			);
-			
+
 			parent::__construct();
 		}
 
