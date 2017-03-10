@@ -41,19 +41,19 @@ class guildImporter extends page_generic {
 		$hmtlout = '<fieldset class="settings mediumsettings">
 			<dl>
 				<dt><label>'.$this->game->glang('import_ranks').'</label></dt>
-				<dd>'.new hradio('ranks').'</dd>
+				<dd>'.(new hradio('ranks'))->output().'</dd>
 			</dl>
 			<dl>
 				<dt><label>'.$this->game->glang('uc_delete_chars_onimport').'</label></dt>
-				<dd>'.new hradio('delete_old_chars').'</dd>
+				<dd>'.(new hradio('delete_old_chars'))->output().'</dd>
 			</dl>
 			<dl>
 				<dt><label>'.$this->game->glang('guild_xml_lang').'</label></dt>
-				<dd>'.new hdropdown('xmllang', array('options' => $arrLangs, 'value' => $this->config->get('game_language'))).'</dd>
+				<dd>'.(new hdropdown('xmllang', array('options' => $arrLangs, 'value' => $this->config->get('game_language'))))->output().'</dd>
 			</dl>
 			<dl>
 				<dt><label>'.$this->game->glang('guild_xml').'</label></dt>
-				<dd>'.new htextarea('guildxml', array('rows' => 20, 'cols' => 40)).'</dd>
+				<dd>'.(new htextarea('guildxml', array('rows' => 20, 'cols' => 40)))->output().'</dd>
 			</dl>
 			</fieldset>';
 		$hmtlout .= '<br/><input type="submit" name="submiti" value="'.$this->game->glang('uc_import_forw').'" class="mainoption bi_ok" />';
@@ -68,7 +68,7 @@ class guildImporter extends page_generic {
 			//Import Ranks
 			$arrRankList = array();
 			if ((int)$this->in->get('ranks') == 1){
-				$objRanks = $xml->Ranks->Rank;				
+				$objRanks = $xml->Ranks->Rank;
 				$arrRanks = $this->pdh->aget('rank', 'name', 0, array($this->pdh->get('rank', 'id_list')));
 				foreach ($objRanks as $objRank){
 					$rankid = array_search((string)$objRank->Name, $arrRanks);
@@ -89,7 +89,7 @@ class guildImporter extends page_generic {
 			}
 			
 			//Import Chars
-			foreach ($xml->Members->Member as $objMember) {	
+			foreach ($xml->Members->Member as $objMember) {
 				$dataarry = array(
 					'name'		=> sanitize((string)$objMember->Name),
 					'level'		=> (int)$objMember->Level,
